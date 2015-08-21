@@ -14,8 +14,7 @@
 	<classpathentry kind="src" path="src/yarn/registry"/>
 	<classpathentry excluding="**/package-info.java" kind="src" path="src/yarn/client"/>
 	<classpathentry kind="src" path="src/yarn/server"/>
-	<classpathentry kind="src" path="src/proto"/>
-	<classpathentry kind="src" path="src/protoc/java"/>
+	<classpathentry kind="src" path="src/proto/java"/>
 	<classpathentry kind="src" path="src/avro"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ant-1.9.4"/>
