@@ -1,0 +1,1 @@
+protoc --java_out=DST_DIR  *.proto
