@@ -21,7 +21,7 @@ option java_outer_classname = "ShuffleHandlerRecoveryProtos";
 option java_generic_services = true;
 package hadoop.mapreduce;
 
-import "Security.proto";
+import "src/proto/common/Security.proto";
 
 message JobShuffleInfoProto {
   optional string user = 1;
