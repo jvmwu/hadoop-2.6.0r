@@ -2,6 +2,18 @@
 <classpath>
 	<classpathentry kind="src" path="src/common"/>
 	<classpathentry kind="src" path="src/hdfs"/>
+	<classpathentry kind="src" path="src/mapreduce/app"/>
+	<classpathentry kind="src" path="src/mapreduce/common"/>
+	<classpathentry kind="src" path="src/mapreduce/core"/>
+	<classpathentry kind="src" path="src/mapreduce/hs"/>
+	<classpathentry kind="src" path="src/mapreduce/jobclient"/>
+	<classpathentry kind="src" path="src/mapreduce/shuffle"/>
+	<classpathentry kind="src" path="src/yarn/api"/>
+	<classpathentry kind="src" path="src/yarn/applications"/>
+	<classpathentry kind="src" path="src/yarn/client"/>
+	<classpathentry kind="src" path="src/yarn/common"/>
+	<classpathentry kind="src" path="src/yarn/registry"/>
+	<classpathentry kind="src" path="src/yarn/server"/>
 	<classpathentry kind="src" path="src/proto"/>
 	<classpathentry kind="src" path="src/protoc/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
