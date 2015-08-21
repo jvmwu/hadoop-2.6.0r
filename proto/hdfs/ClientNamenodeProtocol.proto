@@ -28,7 +28,7 @@ option java_generic_services = true;
 option java_generate_equals_and_hash = true;
 package hadoop.hdfs;
 
-import "src/proto/common/Security.proto";
+import "proto/common/Security.proto";
 import "hdfs.proto";
 import "acl.proto";
 import "xattr.proto";

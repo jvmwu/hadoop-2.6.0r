@@ -22,9 +22,9 @@ option java_generic_services = true;
 option java_generate_equals_and_hash = true;
 package hadoop.mapreduce;
 
-import "src/proto/common/Security.proto";
+import "proto/common/Security.proto";
 import "mr_protos.proto";
-import "src/proto/yarn/api/yarn_protos.proto";
+import "proto/yarn/api/yarn_protos.proto";
 
 message GetJobReportRequestProto {
   optional JobIdProto job_id = 1;

@@ -22,7 +22,7 @@ option java_generic_services = true;
 option java_generate_equals_and_hash = true;
 package hadoop.yarn;
 
-import "src/proto/common/Security.proto";
+import "proto/common/Security.proto";
 import "yarn_service_protos.proto";
 
 service ApplicationHistoryProtocolService {
