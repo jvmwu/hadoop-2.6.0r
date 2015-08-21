@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/common"/>
+	<classpathentry kind="src" path="src/hdfs"/>
+	<classpathentry kind="src" path="src/proto"/>
+	<classpathentry kind="src" path="src/protoc/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hadoop-2.6.0"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ant-1.9.4"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
