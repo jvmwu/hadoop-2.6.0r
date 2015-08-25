@@ -59,32 +59,40 @@ import org.apache.hadoop.util.ToolRunner;
  * </ul>
  */
 public class GetConf extends Configured implements Tool {
-	
-  private static final String DESCRIPTION = "hdfs getconf is utility for getting configuration information from the config file.\n";
+  private static final String DESCRIPTION = "hdfs getconf is utility for "
+      + "getting configuration information from the config file.\n";
 
   enum Command {
-	  
     NAMENODE("-namenodes", "gets list of namenodes in the cluster."),
-    SECONDARY("-secondaryNameNodes", "gets list of secondary namenodes in the cluster."),
+    SECONDARY("-secondaryNameNodes", 
+        "gets list of secondary namenodes in the cluster."),
     BACKUP("-backupNodes", "gets list of backup nodes in the cluster."),
-    INCLUDE_FILE("-includeFile", "gets the include file path that defines the datanodes that can join the cluster."),
-    EXCLUDE_FILE("-excludeFile", "gets the exclude file path that defines the datanodes that need to decommissioned."),
+    INCLUDE_FILE("-includeFile",
+        "gets the include file path that defines the datanodes " +
+        "that can join the cluster."),
+    EXCLUDE_FILE("-excludeFile",
+        "gets the exclude file path that defines the datanodes " +
+        "that need to decommissioned."),
     NNRPCADDRESSES("-nnRpcAddresses", "gets the namenode rpc addresses"),
     CONFKEY("-confKey [key]", "gets a specific key from the configuration");
 
     private static final Map<String, CommandHandler> map;
-    
     static  {
-    	
       map = new HashMap<String, CommandHandler>();
-      map.put(NAMENODE.getName().toLowerCase(), new NameNodesCommandHandler());
-      map.put(SECONDARY.getName().toLowerCase(), new SecondaryNameNodesCommandHandler());
-      map.put(BACKUP.getName().toLowerCase(), new BackupNodesCommandHandler());
-      map.put(INCLUDE_FILE.getName().toLowerCase(), new CommandHandler(DFSConfigKeys.DFS_HOSTS));
-      map.put(EXCLUDE_FILE.getName().toLowerCase(), new CommandHandler(DFSConfigKeys.DFS_HOSTS_EXCLUDE));
-      map.put(NNRPCADDRESSES.getName().toLowerCase(), new NNRpcAddressesCommandHandler());
-      map.put(CONFKEY.getName().toLowerCase(), new PrintConfKeyCommandHandler());
-      
+      map.put(NAMENODE.getName().toLowerCase(), 
+          new NameNodesCommandHandler());
+      map.put(SECONDARY.getName().toLowerCase(),
+          new SecondaryNameNodesCommandHandler());
+      map.put(BACKUP.getName().toLowerCase(), 
+          new BackupNodesCommandHandler());
+      map.put(INCLUDE_FILE.getName().toLowerCase(), 
+          new CommandHandler(DFSConfigKeys.DFS_HOSTS));
+      map.put(EXCLUDE_FILE.getName().toLowerCase(),
+          new CommandHandler(DFSConfigKeys.DFS_HOSTS_EXCLUDE));
+      map.put(NNRPCADDRESSES.getName().toLowerCase(),
+          new NNRpcAddressesCommandHandler());
+      map.put(CONFKEY.getName().toLowerCase(),
+          new PrintConfKeyCommandHandler());
     }
     
     private final String cmd;
@@ -113,7 +121,6 @@ public class GetConf extends Configured implements Tool {
   }
   
   static final String USAGE;
-  
   static {
     HdfsConfiguration.init();
     
