@@ -19,9 +19,16 @@
 <configuration>
 
   <property>
-    <name>fs.default.name</name>
+    <!-- <name>fs.default.name</name> -->
+    <name>fs.defaultFS</name>
     <value>hdfs://hadoop-master:9000</value>
   </property>
+  
+  <property>
+    <name>fs.hdfs.impl</name>
+    <value>org.apache.hadoop.hdfs.DistributedFileSystem</value>
+  </property>
+  
   <property>
     <name>hadoop.tmp.dir</name>
     <!-- <value>/home/hadoop/modules/hadoop-1.2.1/tmp</value> -->
