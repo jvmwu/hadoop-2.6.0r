@@ -25,7 +25,7 @@ public class SequenceFileWriteDemo {
 	public static void main(String[] args) throws IOException {
 		// fs, conf, path, key.class, value.class
 		
-		String uri = args[1];
+		String uri = args[0];
 		Configuration conf = new Configuration();
 		FileSystem fs = FileSystem.get(URI.create(uri), conf);
 		Path path = new Path(uri);
